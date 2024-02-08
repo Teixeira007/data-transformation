@@ -15,10 +15,10 @@ tables = tabula.read_pdf("AnexoI.pdf", pages='all', lattice=True)
 combined_table = pd.concat(tables, ignore_index=True)
 
 #Renomeando as colunas OD e AMD para sua descrição completa
-combined_table = combined_table.rename(columns={'OD': 'Seg. Odontológica', 'AMB': 'Seg. Ambulatorio'})
+final_table = combined_table.rename(columns={'OD': 'Seg. Odontológica', 'AMB': 'Seg. Ambulatorio'})
 
 #Salvando a tabela em formtato csv
-combined_table.to_csv("AnexoI.csv", index=False)
+final_table.to_csv("AnexoI.csv", index=False)
 
 #nome do arquivo csv
 name_file_csv = 'AnexoI.csv'
